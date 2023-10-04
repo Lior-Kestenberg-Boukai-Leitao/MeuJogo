@@ -9,8 +9,12 @@ public class Pontos : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
-        hits++;
-        Debug.Log("você bateu tantas vezes: " + hits);
+        if (other.gameObject.tag != "Hit"){
+
+            hits++;
+            Debug.Log("você bateu tantas vezes: " + hits);
+
+        }
     }
 
 }
